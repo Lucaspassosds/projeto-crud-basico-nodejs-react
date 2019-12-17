@@ -8,7 +8,7 @@ Banco de dados:MongoDB
 ORM: Mongoose.
 
 É necessário ter o NodeJs instalado e o mongoDB para rodar a aplicação.
-É necessário fazer uma requisição HTTP para o backend para criar as tabelas do tipo CURSO, que serão usadas no front-end.
+É necessário fazer uma requisição HTTP(indicavel usar o Postman) para o backend para criar as tabelas do tipo CURSO, que serão usadas no front-end.
 
 Front end feito com,
 Linguagem: Javascript
