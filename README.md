@@ -1,5 +1,4 @@
-# projeto-selpe
-Projeto da prova técnica da Selpe
+# projeto crud com MERN stack
 
 Back end feito com,
 Linguagem:NodeJS
