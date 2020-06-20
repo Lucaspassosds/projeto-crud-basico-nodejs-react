@@ -9,14 +9,25 @@ class TableRow extends Component {
   constructor(props) {
         super(props);
         this.delete = this.delete.bind(this);
+
+        this.state = {
+          isDeleted : false,
+        }
     }
     delete() {
         axios.delete('http://localhost:3001/pessoas/'+this.props.obj._id)
-            .then(console.log('Deleted'))
+            .then(() => {
+              console.log('Deleted');
+              this.setState({
+                isDeleted: true
+              });
+          })
             .catch(err => console.log(err))
     }
   render() {
     return (
+      <>
+       { this.state.isDeleted ? null : 
         <tr>
           <td>
             {this.props.obj.nome}
@@ -34,6 +45,8 @@ class TableRow extends Component {
             <button onClick={this.delete} className="btn btn-danger">Deletar</button>
           </td>
         </tr>
+      }
+      </>
     );
   }
 }

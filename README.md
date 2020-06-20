@@ -23,6 +23,7 @@ O servidor será iniciado na porta 3001.
 
 Depois inicie o front end, indo no cmd no diretorio onde a aplicação está baixada e digitando:
 cd client
+npm install // apenas na primeira vez que for utilizar a aplicação
 npm start
 
 O cliente será iniciado automaticamente na porta 3000.

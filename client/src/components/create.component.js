@@ -49,7 +49,7 @@ export default class Create extends Component {
     onSubmit(e) {
       e.preventDefault();
 
-      let cursosArray = [];
+      const cursosArray = [];
       for(const i in this.state.cursos){
           if (document.getElementById(this.state.cursos[i].nome).checked) {
               console.log(this.state.cursos[i].nome);
@@ -58,14 +58,15 @@ export default class Create extends Component {
           }
       }
 
-      const obj={
+      const obj = {
           nome: this.state.nome,
           telefone: this.state.telefone,
           CPF: this.state.CPF,
           cursos: cursosArray
       };
       axios.post('http://localhost:3001/pessoas', obj)
-      .then(res => console.log(res.data));
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err));
       this.setState({
         nome: '',
         telefone: '',
