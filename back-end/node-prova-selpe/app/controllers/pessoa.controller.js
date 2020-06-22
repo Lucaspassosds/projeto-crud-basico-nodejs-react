@@ -32,6 +32,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
     Pessoa.find()
     .then(pessoas => {
+        console.log(pessoas);
         res.send(pessoas);
     }).catch(err => {
         res.status(500).send({

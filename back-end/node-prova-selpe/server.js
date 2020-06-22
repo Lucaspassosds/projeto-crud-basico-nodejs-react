@@ -9,10 +9,10 @@ const app = express();
 app.use(cors());
 
 // analisa requisicoes de content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // analisa requisicoes content-type - application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 // Configurando a base de dados
 const dbConfig = require('./config/database.config.js');
